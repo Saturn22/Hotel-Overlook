@@ -79,7 +79,7 @@ public class Room implements Serializable{
 	 * 
 	 */
 	public String toString() {
-		return "Room [price=" + price + ", roomType=" + roomType + ", smokingAllowed=" + smokingAllowed +  "roomNumber=" + roomNumber + "]";
+		return "Room [price=" + price + ", roomType=" + roomType + ", smokingAllowed=" + smokingAllowed +  ", roomNumber=" + roomNumber + "]";
 	}
 	
 	/**
@@ -87,7 +87,7 @@ public class Room implements Serializable{
 	 * @return A copy of the Room object
 	 */
 	public Room copy(){
-		return copy();
+		return new Room(price, roomType, roomNumber, smokingAllowed) ;
 	}
 	
 	public boolean equals(Object obj){
