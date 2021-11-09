@@ -251,7 +251,7 @@ public class HomeGui {
 
 					if(Double.parseDouble(discountField.getText()) < 0)
 		            {
-		              MyExceptions.InvalidNumberDiscountException();
+		              Exceptions.InvalidNumberDiscountException();
 		            }
 					
 					checkInAdapter.addDiscount(reservation, discount);
@@ -262,7 +262,7 @@ public class HomeGui {
 					JOptionPane.showMessageDialog(null,"Choose a reservation in the table to add discount.");
 				} catch (NumberFormatException err) {
 					JOptionPane.showMessageDialog(null,"Discount must be a number.");
-				}catch(MyExceptions err){
+				}catch(Exceptions err){
 					JOptionPane.showMessageDialog(null, err.getMessage());
 				}
 

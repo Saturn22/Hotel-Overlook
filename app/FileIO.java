@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class MyFileIO {
+public class FileIO {
 
 	// Writes the given object to a file with the given file name
 	public void writeToFile(String fileName, Object obj) throws FileNotFoundException, IOException{

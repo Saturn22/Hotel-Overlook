@@ -402,11 +402,11 @@ public class ReservationGui
         		
                 if (departure.before(arrival) || departure.equals(arrival))
                 {
-                   MyExceptions.InvalidDateException();
+                   Exceptions.InvalidDateException();
                 }
                 else if (!arrival.after(today) && !sdf.format(arrival).equals(sdf.format(today)))
                 {
-                   MyExceptions.DateBeforeTodaysDateException();
+                   Exceptions.DateBeforeTodaysDateException();
                 }
             
                 
@@ -426,7 +426,7 @@ public class ReservationGui
             }
             
             
-            catch (MyExceptions err)
+            catch (Exceptions err)
             {
             	JOptionPane.showMessageDialog(null, err.getMessage());
             }
@@ -492,7 +492,7 @@ public class ReservationGui
                || comboBox_1.getSelectedItem().equals("")
                || dateChooser_2.getDate().equals(null))
          {
-            MyExceptions.InvalidStringException();
+            Exceptions.InvalidStringException();
          }
          String firstName = firstNameField.getText();
          String lastName = lastNameField.getText();
@@ -506,7 +506,7 @@ public class ReservationGui
          // Room Object
          if (roomTypeField.getText().equals(""))
          {
-            MyExceptions.InvalidRoomExceptiom();
+            Exceptions.InvalidRoomExceptiom();
          }
          String roomType = roomTypeField.getText();
          double price = Double.parseDouble(priceField.getText());
@@ -543,7 +543,7 @@ public class ReservationGui
          }
          if (expectedGuests < 0)
          {
-            MyExceptions.InvalidNumberExpectedGuestException();
+            Exceptions.InvalidNumberExpectedGuestException();
          }
 
          double discount = 0;
@@ -553,7 +553,7 @@ public class ReservationGui
          }
          if (discount < 0)
          {
-            MyExceptions.InvalidNumberDiscountException();
+            Exceptions.InvalidNumberDiscountException();
          }
 
          boolean lateArrival = arrivallateBox.isSelected();
@@ -564,7 +564,7 @@ public class ReservationGui
 
          JOptionPane.showMessageDialog(null,"Reservation has been added.");
       }
-      catch (MyExceptions err)
+      catch (Exceptions err)
       {
          JOptionPane.showMessageDialog(null, err.getMessage());
          error = true;

@@ -445,19 +445,19 @@ public class ChangeGui
                
                if(!arrival.equals(reservationChange.getArrival()))
                {
-                 MyExceptions.InvalidChangeArrivalDateException();
+                 Exceptions.InvalidChangeArrivalDateException();
                }
                if(departure.after(reservationChange.getDeparture()))
                {
-                 MyExceptions.InvalidChangeDepartureDateException();
+                 Exceptions.InvalidChangeDepartureDateException();
                }   
                if(Integer.parseInt(expectedGuestField.getText()) < 0)
                {
-                 MyExceptions.InvalidNumberExpectedGuestException();
+                 Exceptions.InvalidNumberExpectedGuestException();
                }
                if(Double.parseDouble(discountField.getText()) < 0)
                {
-                 MyExceptions.InvalidNumberDiscountException();
+                 Exceptions.InvalidNumberDiscountException();
                }
                
 
@@ -501,7 +501,7 @@ public class ChangeGui
                JOptionPane.showMessageDialog(null,
                      "Choose a reservation in the table to change it.");
             }
-            catch (MyExceptions err)
+            catch (Exceptions err)
             {
                JOptionPane.showMessageDialog(null, err.getMessage());
             }
@@ -634,7 +634,7 @@ public class ChangeGui
 
                if (comboBox_1.getSelectedItem().equals("Pick Guest"))
                {
-                  MyExceptions.InvalidDeleteGuestExcpetion();
+                  Exceptions.InvalidDeleteGuestExcpetion();
                }
 
                Guest[] guests = reservationChange.getAllGuests();
@@ -672,7 +672,7 @@ public class ChangeGui
                JOptionPane.showMessageDialog(null, "Guest has been removed.");
 
             }
-            catch (MyExceptions err)
+            catch (Exceptions err)
             {
                JOptionPane.showMessageDialog(null, err.getMessage());
             }
@@ -691,7 +691,7 @@ public class ChangeGui
                      || dateChooser_2.getDate().equals(null)
                      || comboBox_2.getSelectedItem().equals(""))
                {
-                  MyExceptions.InvalidStringException();
+                  Exceptions.InvalidStringException();
                }
                
                Guest[] guests = reservationChange.getAllGuests();
@@ -735,7 +735,7 @@ public class ChangeGui
                JOptionPane.showMessageDialog(null, "Guest has been changed.");
                
             }
-            catch (MyExceptions err)
+            catch (Exceptions err)
             {
                JOptionPane.showMessageDialog(null, err.getMessage());
             }
@@ -754,7 +754,7 @@ public class ChangeGui
                      || dateChooser_2.getDate().equals(null)
                      || comboBox_2.getSelectedItem().equals(""))
                {
-                  MyExceptions.InvalidStringException();
+                  Exceptions.InvalidStringException();
                }
 
                Guest guest = new Guest(firstNameField.getText(),
@@ -783,7 +783,7 @@ public class ChangeGui
                JOptionPane.showMessageDialog(null, "Guest has been added.");
                
             }
-            catch (MyExceptions err)
+            catch (Exceptions err)
             {
                JOptionPane.showMessageDialog(null, err.getMessage());
             }

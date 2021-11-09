@@ -1,6 +1,5 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -10,7 +9,7 @@ import java.util.Date;
  */
 public class RoomFileAdapter
 {
-   private MyFileIO mfio;
+   private FileIO mfio;
    private String fileName;
 
    /**
@@ -21,7 +20,7 @@ public class RoomFileAdapter
     */
    public RoomFileAdapter(String fileName)
    {
-      mfio = new MyFileIO();
+      mfio = new FileIO();
       this.fileName = fileName;
    }
 

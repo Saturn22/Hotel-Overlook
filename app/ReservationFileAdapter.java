@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,7 +11,7 @@ import java.util.Date;
 
 public class ReservationFileAdapter {
 
-	private MyFileIO mfio;
+	private FileIO mfio;
 	private String fileName;
 		
 	
@@ -21,7 +20,7 @@ public class ReservationFileAdapter {
 	 * @param fileName Name of the file where the reservationlist should be saved.
 	 */
 	public ReservationFileAdapter(String fileName){
-	      mfio = new MyFileIO();
+	      mfio = new FileIO();
 	      this.fileName = fileName;
 	}		  
 		

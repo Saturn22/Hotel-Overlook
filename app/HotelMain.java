@@ -43,6 +43,7 @@ public class HotelMain {
 
 		/*
 		 * Icons
+		 *
 		 */
 		System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		homeIcon = new ImageIcon("img/Home.png");
